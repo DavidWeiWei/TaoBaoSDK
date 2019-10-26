@@ -38,6 +38,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Request\TbkOrderDetailsGetRequest.cs" />
+    <Compile Include="Response\TbkOrderDetailsGetResponse.cs" />
     <Compile Include="TopBatchRequest.cs" />
     <Compile Include="TopObject.cs" />
     <Compile Include="AutoRetryClusterTopClient.cs" />
