@@ -13,7 +13,8 @@ namespace Top.Api.Response
 
     [Serializable]
     public class OrderPage : TopObject {
-        [XmlElement("results")]
+        [XmlArray("results")]
+        [XmlArrayItem("publisher_order_dto")]
         public List<PublisherOrderDto> Results { get; set; }
 
         [XmlElement("has_pre")]
@@ -26,10 +27,10 @@ namespace Top.Api.Response
         public bool HasNext { get; set; }
 
         [XmlElement("page_no")]
-        public int PageNo { get; set; }
+        public long PageNo { get; set; }
 
         [XmlElement("page_size")]
-        public int PageSize { get; set; }
+        public long PageSize { get; set; }
     }
 
     [Serializable]
@@ -74,7 +75,7 @@ namespace Top.Api.Response
         /// 二方：佣金收益的第一归属者； 三方：从其他淘宝客佣金中进行分成的推广者
         /// </summary>
         [XmlElement("tk_order_role")]
-        public int TkOrderRole { get; set; }
+        public long TkOrderRole { get; set; }
 
 
         /// <summary>
@@ -88,7 +89,7 @@ namespace Top.Api.Response
         /// 推广位管理下的推广位名称对应的ID，同时也是pid=mm_1_2_3中的“3”这段数字
         /// </summary>
         [XmlElement("adzone_id")]
-        public int AdzoneId { get; set; }
+        public long AdzoneId { get; set; }
 
 
         /// <summary>
@@ -102,14 +103,14 @@ namespace Top.Api.Response
         /// unid
         /// </summary>
         [XmlElement("unid")]
-        public int Unid { get; set; }
+        public long Unid { get; set; }
 
 
         /// <summary>
         /// 维权标签，0 含义为非维权 1 含义为维权订单
         /// </summary>
         [XmlElement("refund_tag")]
-        public int RefundTag { get; set; }
+        public long RefundTag { get; set; }
 
 
         /// <summary>
@@ -144,7 +145,7 @@ namespace Top.Api.Response
         /// 推广者的会员id
         /// </summary>
         [XmlElement("pub_id")]
-        public int PubId { get; set; }
+        public long PubId { get; set; }
 
 
         /// <summary>
@@ -200,7 +201,7 @@ namespace Top.Api.Response
         /// 商品数量
         /// </summary>
         [XmlElement("item_num")]
-        public int ItemNum { get; set; }
+        public long ItemNum { get; set; }
 
 
         /// <summary>
@@ -263,7 +264,7 @@ namespace Top.Api.Response
         /// 已付款：指订单已付款，但还未确认收货 已收货：指订单已确认收货，但商家佣金未支付 已结算：指订单已确认收货，且商家佣金已支付成功已失效：指订单关闭/订单佣金小于0.01元，订单关闭主要有：1）买家超时未付款； 2）买家付款前，买家/卖家取消了订单；3）订单付款后发起售中退款成功；3：订单结算，12：订单付款，13：订单失效，14：订单成功
         /// </summary>
         [XmlElement("tk_status")]
-        public int TkStatus { get; set; }
+        public long TkStatus { get; set; }
 
 
         /// <summary>
@@ -305,7 +306,7 @@ namespace Top.Api.Response
         /// 媒体管理下的ID，同时也是pid=mm_1_2_3中的“2”这段数字
         /// </summary>
         [XmlElement("site_id")]
-        public int SiteId { get; set; }
+        public long SiteId { get; set; }
 
 
         /// <summary>
@@ -354,14 +355,14 @@ namespace Top.Api.Response
         /// 会员运营id
         /// </summary>
         [XmlElement("special_id")]
-        public int SpecialId { get; set; }
+        public long SpecialId { get; set; }
 
 
         /// <summary>
         /// 渠道关系id
         /// </summary>
         [XmlElement("relation_id")]
-        public int RelationId { get; set; }
+        public long RelationId { get; set; }
 
 
         /// <summary>

@@ -13,7 +13,7 @@ namespace Top.Api.Request
         /// <summary>
         /// 查询时间类型，1：按照订单淘客创建时间查询，2:按照订单淘客付款时间查询，3:按照订单淘客结算时间查询
         /// </summary>
-        public int QueryType { get; set; }
+        public long QueryType { get; set; }
 
         /// <summary>
         /// 位点，除第一页之外，都需要传递；前端原样返回。
@@ -23,17 +23,17 @@ namespace Top.Api.Request
         /// <summary>
         /// 页大小，默认20，1~100
         /// </summary>
-        public int PageSize { get; set; }
+        public long PageSize { get; set; }
 
         /// <summary>
         /// 推广者角色类型,2:二方，3:三方，不传，表示所有角色
         /// </summary>
-        public int MemberType { get; set; }
+        public Nullable<long> MemberType { get; set; }
 
         /// <summary>
         /// 淘客订单状态，12-付款，13-关闭，14-确认收货，3-结算成功;不传，表示所有状态
         /// </summary>
-        public int TkStatus { get; set; }
+        public long TkStatus { get; set; }
 
         /// <summary>
         /// 订单查询开始时间
@@ -48,17 +48,17 @@ namespace Top.Api.Request
         /// <summary>
         /// 跳转类型，当向前或者向后翻页必须提供,-1: 向前翻页,1：向后翻页
         /// </summary>
-        public int JumpType { get; set; }
+        public long JumpType { get; set; }
 
         /// <summary>
         /// 第几页，默认1，1~100
         /// </summary>
-        public int PageNo { get; set; }
+        public long PageNo { get; set; }
 
         /// <summary>
         /// 场景订单场景类型，1:常规订单，2:渠道订单，3:会员运营订单，默认为1
         /// </summary>
-        public int OrderScene { get; set; }
+        public long OrderScene { get; set; }
 
         #region ITopRequest Members
         public override string GetApiName()
