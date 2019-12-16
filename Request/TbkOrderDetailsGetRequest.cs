@@ -13,7 +13,7 @@ namespace Top.Api.Request
         /// <summary>
         /// 查询时间类型，1：按照订单淘客创建时间查询，2:按照订单淘客付款时间查询，3:按照订单淘客结算时间查询
         /// </summary>
-        public long QueryType { get; set; }
+        public long? QueryType { get; set; }
 
         /// <summary>
         /// 位点，除第一页之外，都需要传递；前端原样返回。
@@ -33,7 +33,7 @@ namespace Top.Api.Request
         /// <summary>
         /// 淘客订单状态，12-付款，13-关闭，14-确认收货，3-结算成功;不传，表示所有状态
         /// </summary>
-        public long TkStatus { get; set; }
+        public long? TkStatus { get; set; }
 
         /// <summary>
         /// 订单查询开始时间
